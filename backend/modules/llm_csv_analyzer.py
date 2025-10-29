@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 # ✅ Initialize OpenRouter client
 
-#API_KEY = os.getenv("OPENROUTER_API_KEY")
+API_KEY = os.getenv("OPENROUTER_API_KEY")
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key=API_KEY,  # 🔑 replace with your API key
@@ -160,5 +160,6 @@ def ask_llm_about_csv(query):
     summary = completion.choices[0].message.content.strip()
 
     return {"summary": summary, "results": results}
+
 
 
