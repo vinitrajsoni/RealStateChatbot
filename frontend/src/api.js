@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://127.0.0.1:8000/", // your backend endpoint
+  baseURL: "https://realstatechatbot.onrender.com", // your backend endpoint
 });
 
 export default api;
+
