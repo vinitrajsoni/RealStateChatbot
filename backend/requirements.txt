@@ -1,6 +1,7 @@
 fastapi
 uvicorn
-pandas==2.2.2
+pandas
 python-dotenv
 langchain
 langchain-google-genai
+
