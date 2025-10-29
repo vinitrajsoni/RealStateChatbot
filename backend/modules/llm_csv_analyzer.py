@@ -10,7 +10,7 @@ load_dotenv()
 API_KEY = os.getenv("OPENROUTER_API_KEY")
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="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",  # 🔑 replace with your API key
+    api_key=API_KEY,  # 🔑 replace with your API key
     default_headers={
         "HTTP-Referer": "http://localhost",
         "X-Title": "CSV Query Chatbot"
@@ -160,3 +160,4 @@ def ask_llm_about_csv(query):
     summary = completion.choices[0].message.content.strip()
 
     return {"summary": summary, "results": results}
+
