@@ -12,8 +12,8 @@ client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
     api_key=API_KEY,  # 🔑 replace with your API key
     default_headers={
-        "HTTP-Referer": "http://localhost",
-        "X-Title": "CSV Query Chatbot"
+    "HTTP-Referer": "https://render.com",
+    "X-Title": "NoBrokerage Assistant"
     }
 )
 
@@ -160,6 +160,7 @@ def ask_llm_about_csv(query):
     summary = completion.choices[0].message.content.strip()
 
     return {"summary": summary, "results": results}
+
 
 
 
