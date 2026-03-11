@@ -1,126 +1,140 @@
+/* Reset page styles */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+/* Chat Container */
 .chat-container {
   display: flex;
   flex-direction: column;
   width: 600px;
-  margin: 50px auto;
-  border: 1px solid #ddd;
+  margin: 60px auto;
   border-radius: 15px;
   overflow: hidden;
-  background: #fdfdfd;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
+/* Chat Window */
 .chat-window {
   height: 500px;
   overflow-y: auto;
-  padding: 15px;
-  background: #fff;
+  padding: 20px;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Input Area */
 .input-area {
   display: flex;
-  border-top: 1px solid #ddd;
-  padding: 10px;
-  background: #fafafa;
+  border-top: 1px solid #e5e5e5;
+  padding: 12px;
+  background: #f1f5f9;
 }
 
 .input-area input {
   flex: 1;
   padding: 10px;
-  border: none;
+  border: 1px solid #ddd;
   outline: none;
-  font-size: 16px;
-  background: #fff;
-  border-radius: 10px;
+  font-size: 15px;
+  border-radius: 8px;
 }
 
 .input-area button {
   margin-left: 10px;
-  padding: 10px 20px;
+  padding: 10px 18px;
   border: none;
-  background: #007bff;
+  background: linear-gradient(135deg,#6366f1,#8b5cf6);
   color: white;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
 }
 
 .input-area button:hover {
-  background: #0056b3;
+  opacity: 0.9;
 }
 
+/* Messages */
 .message {
   margin: 10px 0;
-  padding: 12px;
+  padding: 12px 15px;
   border-radius: 12px;
-  max-width: 80%;
+  max-width: 75%;
   word-wrap: break-word;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
+/* User message */
 .message.user {
-  background-color: #e3f2fd;
+  background-color: #dbeafe;
   align-self: flex-end;
 }
 
+/* Bot message */
 .message.bot {
-  background-color: #f1f8e9;
+  background-color: #e2fbe8;
   align-self: flex-start;
 }
 
+/* Loading text */
 .loading {
   font-style: italic;
   color: #888;
 }
 
-.project-card {
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 10px 15px;
-  margin: 10px 0;
-  background: #f9f9f9;
-}
-
-.project-card p {
-  margin: 5px 0;
-  line-height: 1.4;
-}
-
-.project-card a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
-}
-
-
+/* Project Card */
 .project-card {
   background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   padding: 16px;
   margin: 16px 0;
-  transition: transform 0.2s;
+  transition: transform 0.2s ease;
 }
 
 .project-card:hover {
-  transform: scale(1.02);
+  transform: translateY(-3px);
 }
 
+/* Card fields */
 .project-field {
   margin-bottom: 8px;
 }
 
+/* Image section */
 .image-section {
   margin-top: 8px;
 }
 
+/* Project image */
 .project-image {
   width: 100%;
   max-width: 350px;
   height: auto;
   border-radius: 10px;
   margin-top: 6px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Links */
+.project-card a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
 }
