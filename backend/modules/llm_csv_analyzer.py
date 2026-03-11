@@ -151,7 +151,7 @@ def ask_llm_about_csv(query):
         sample_summary += "."
 
     completion = client.chat.completions.create(
-        model="mistralai/mistral-7b-instruct",
+        model="mistralai/mistral-small",
         messages=[
             {"role": "system", "content": "Summarize property search results briefly."},
             {"role": "user", "content": sample_summary}
@@ -160,6 +160,7 @@ def ask_llm_about_csv(query):
     summary = completion.choices[0].message.content.strip()
 
     return {"summary": summary, "results": results}
+
 
 
 
